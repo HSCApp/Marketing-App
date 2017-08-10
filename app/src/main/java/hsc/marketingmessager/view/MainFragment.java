@@ -5,7 +5,6 @@ import android.widget.RelativeLayout;
 
 import butterknife.BindView;
 import hsc.marketingmessager.R;
-import hsc.marketingmessager.support.IoSupport;
 import hsc.marketingmessager.view.addgroup.AddGroup;
 import hsc.marketingmessager.view.addnumber.fragment.AddNumber;
 import hsc.marketingmessager.view.base.BaseFragment;
@@ -32,6 +31,11 @@ public class MainFragment extends BaseFragment implements View.OnClickListener {
     @Override
     protected int setContentView() {
         return R.layout.main_fragment;
+
+    }
+
+    @Override
+    protected void initVariable() {
 
     }
 

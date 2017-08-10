@@ -14,6 +14,11 @@ public class ManagerNumber extends BaseFragment {
     }
 
     @Override
+    protected void initVariable() {
+
+    }
+
+    @Override
     protected void init() {
 
     }

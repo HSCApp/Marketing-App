@@ -13,6 +13,11 @@ public class SendMessage extends BaseFragment {
         return R.layout.add_number_fragment;
     }
 
+    @Override
+    protected void initVariable() {
+
+    }
+
 
     @Override
     protected void init() {

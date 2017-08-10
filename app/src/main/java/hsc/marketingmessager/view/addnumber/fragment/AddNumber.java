@@ -34,6 +34,11 @@ public class AddNumber extends BaseFragment {
         return R.layout.add_number_fragment;
     }
 
+    @Override
+    protected void initVariable() {
+
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void init() {

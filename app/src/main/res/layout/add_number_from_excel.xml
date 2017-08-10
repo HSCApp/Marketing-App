@@ -3,12 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
-
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <include layout="@layout/item_read_from_excel_header"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </HorizontalScrollView>
     <RelativeLayout
         android:id="@+id/rl_open_file"
         android:background="@drawable/ripple"

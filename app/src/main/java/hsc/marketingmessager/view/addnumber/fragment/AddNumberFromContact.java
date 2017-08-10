@@ -8,9 +8,15 @@ import hsc.marketingmessager.view.base.BaseFragment;
  */
 
 public class AddNumberFromContact extends BaseFragment {
+
     @Override
     protected int setContentView() {
         return R.layout.add_number_from_contact;
+    }
+
+    @Override
+    protected void initVariable() {
+
     }
 
     @Override

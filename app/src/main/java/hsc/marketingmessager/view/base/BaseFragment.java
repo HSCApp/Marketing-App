@@ -22,6 +22,10 @@ import hsc.marketingmessager.model.Eu;
 public abstract class BaseFragment extends Fragment {
     protected Eu eu;
     private String TAG = getClass().getSimpleName();
+    public BaseFragment()
+    {
+        initVariable();
+    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected abstract int setContentView();
+    protected abstract void initVariable();
 
     @Override
     public void onAttach(Context context) {
