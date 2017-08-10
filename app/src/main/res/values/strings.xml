@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">MarketingMessager</string>
+    <string name="add_number">Add phone number</string>
+    <string name="banner_main_fragment_top">ca-app-pub-6685676995277716/7732789407</string>
+    <string name="banner2">ca-app-pub-6685676995277716/7845250291</string>
+    <string name="banner3">ca-app-pub-6685676995277716/9266320784</string>
+    <string name="banner_full_main_fragment">ca-app-pub-6685676995277716/5130676795</string>
+    <string name="manager_phone">Manager phone number</string>
+    <string name="add_group">Add group</string>
+    <string name="manager_group">Manager group</string>
+    <string name="send">Send</string>
+    <string name="send_message">Send message</string>
+    <string name="native_a">ca-app-pub-6685676995277716/7182905319</string>
+    <string name="excel">Excel</string>
+    <string name="add_from_excel">From excel file</string>
+    <string name="add_from_contact">From contact</string>
+    <string name="new_contact">New contact</string>
+    <string name="from_excel">From excel</string>
+    <string name="from_excel_file">From excel file</string>
+    <string name="from_contact">From contact</string>
+    <string name="new_number">New number</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone number</string>
+    <string name="birthday">Birthday</string>
+    <string name="description">Description</string>
+    <string name="check_all">Check all</string>
+    <string-array name="title_fragment_add_number">
+        <item>@string/from_excel_file</item>
+        <item>@string/from_contact</item>
+        <item>@string/new_number</item>
+    </string-array>
+    <string-array name="demo">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+</resources>

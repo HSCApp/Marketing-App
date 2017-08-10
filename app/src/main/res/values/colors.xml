@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3fa151</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlackPaste">#5b5b5b</color>
+
+    <color name="colorBackgroundButtonMainFragment">#f2f2f2</color>
+    <color name="colorBorderButtonMainFragment">#e7e7e7</color>
+    <color name="colorBackgroundButtonPressMainFragment">#e7e7e7</color>
+    <color name="colorBorderButtonPressMainFragment">#cacaca</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhitePaste">#f7f7f7</color>
+
+    <color name="colorGreenPaste">#84a768</color>
+    <color name="colorTran">#00000000</color>
+
+    <color name="colorOvalADark">#139dac</color>
+    <color name="colorOvalA">#19cade</color>
+    <color name="colorOvalAPaste">#ebfdff</color>
+
+    <color name="colorOvalBDark">#3fa151</color>
+    <color name="colorOvalB">#52cf69</color>
+    <color name="colorOvalBPaste">#ebffef</color>
+
+    <color name="colorOvalCDark">#fc4a48b1</color>
+    <color name="colorOvalC">#fc605de1</color>
+    <color name="colorOvalCPaste">#fcecebff</color>
+    <color name="colorRipple">#58d9d9d9</color>
+    <color name="colorRipple2">#95c79e</color>
+    <color name="colorExcelBackground">#f1f1f1</color>
+    <color name="colorCellBorder">#d4d4d4</color>
+    <color name="cellBackground">#ffffff</color>
+    <color name="colorCellBorderPress">#217346</color>
+</resources>

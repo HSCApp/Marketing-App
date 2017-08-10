@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "637762278551",
+    "firebase_url": "https://marketingmessage-845da.firebaseio.com",
+    "project_id": "marketingmessage-845da",
+    "storage_bucket": "marketingmessage-845da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637762278551:android:33d56f783ed111c7",
+        "android_client_info": {
+          "package_name": "hsc.marketingmessager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637762278551-890ms2g4b8gkjs5uup8rlo0maabfrtoc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hsc.marketingmessager",
+            "certificate_hash": "b2b2a5a2e277a066721c00bb909c1d4517c91160"
+          }
+        },
+        {
+          "client_id": "637762278551-j87qmgqbtjnek9mq6i9qtkrkv6fn807f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbN7Ip9EHA-BxxoJZaNKbDV2uUd3bMp_g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637762278551-j87qmgqbtjnek9mq6i9qtkrkv6fn807f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bt_main_fragment_width">50dp</dimen>
+    <dimen name="bt_main_fragment_height">150dp</dimen>
+    <dimen name="button_main_fragment_corner">0dp</dimen>
+    <dimen name="img_button_main_fragment_width">50dp</dimen>
+    <dimen name="img_button_main_fragment_height">50dp</dimen>
+    <dimen name="button_margin_10">10dp</dimen>
+    <dimen name="max_radius">1000px</dimen>
+    <dimen name="oval_a_stroke">1px</dimen>
+    <dimen name="item_tablayout_add_number_size">10sp</dimen>
+    <dimen name="item_read_from_excel_title_size">17sp</dimen>
+</resources>

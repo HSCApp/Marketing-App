@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+    <FrameLayout
+        android:id="@+id/fl_main_activity"
+        android:layout_above="@+id/rl_bottom_menu"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreenPaste"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@mipmap/ic_arrow_left" />
+
+        <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@mipmap/ic_menu" />
+
+        <ImageButton
+            android:id="@+id/ib_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@mipmap/ic_home" />
+    </LinearLayout>
+</RelativeLayout>

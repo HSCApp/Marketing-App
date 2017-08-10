@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    style="@style/scrollbar_main_shape_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom_menu"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_add_number"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bt_main_fragment_height"
+                android:layout_marginLeft="@dimen/button_margin_10"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_main"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/img_button_main_fragment_width"
+                    android:layout_height="@dimen/img_button_main_fragment_height"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/add_phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/add_number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_manager_number"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bt_main_fragment_height"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_main"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/img_button_main_fragment_width"
+                    android:layout_height="@dimen/img_button_main_fragment_height"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/phone_manager" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/manager_phone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_add_group"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bt_main_fragment_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_main"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/img_button_main_fragment_width"
+                    android:layout_height="@dimen/img_button_main_fragment_height"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/add_group" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/add_group" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_manager_group"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bt_main_fragment_height"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_main"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/img_button_main_fragment_width"
+                    android:layout_height="@dimen/img_button_main_fragment_height"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/group_manager" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/manager_group" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_send_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_send_message"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bt_main_fragment_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_button_main"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/img_button_main_fragment_width"
+                    android:layout_height="@dimen/img_button_main_fragment_height"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/send" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/send_message" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
