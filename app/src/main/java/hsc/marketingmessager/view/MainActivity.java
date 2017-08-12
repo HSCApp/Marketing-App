@@ -1,13 +1,15 @@
 package hsc.marketingmessager.view;
 
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ImageButton;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import hsc.marketingmessager.R;
-import hsc.marketingmessager.support.IoSupport;
 import hsc.marketingmessager.view.base.BaseActivity;
+import hsc.marketingmessager.view.base.BaseFragment;
 
 /**
  * Created by Hoang Ha on 8/6/2017.
@@ -41,7 +43,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected boolean isRegisterBus() {
-        return false;
+        return true;
     }
 
     @OnClick(R.id.ib_back)
@@ -66,5 +68,22 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        LogE("REQUEST CODE "+requestCode);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == BaseFragment.READ_CONTACT) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                LogE("request ok");
+                eu.post("REQUEST_READ_CONTACT_GRANTED");
+            }
+            else
+                LogE("request not ok");
+        }
+        else
+        {
+            LogE("ahahahahahahahahahha");
+        }
     }
 }

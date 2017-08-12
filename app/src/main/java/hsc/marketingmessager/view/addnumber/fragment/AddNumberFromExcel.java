@@ -2,12 +2,14 @@ package hsc.marketingmessager.view.addnumber.fragment;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DateUtil;
@@ -41,8 +43,11 @@ public class AddNumberFromExcel extends BaseFragment implements CompoundButton.O
     RecyclerView recyclerView;
     @BindView(R.id.cb_all)
     CheckBox cbAll;
+    @BindView(R.id.fb_add)
+    FloatingActionButton fbAdd;
     ArrayList<NumberOnExcel> numberOnExcels;
     ReadFromExcelAdapter readFromExcelAdapter;
+    private boolean isLoadExcel = false;
 
     @Override
     protected int setContentView() {
@@ -63,15 +68,25 @@ public class AddNumberFromExcel extends BaseFragment implements CompoundButton.O
         recyclerView.setHorizontalScrollBarEnabled(true);
         cbAll.setOnCheckedChangeListener(this);
         LogE("init");
-//        ReadExcelAsyncTask readExcelAsyncTask=new ReadExcelAsyncTask(getContext(),"");
-//        readExcelAsyncTask.execute();
+        if (isLoadExcel)
+            rlOpenFile.setVisibility(View.INVISIBLE);
     }
 
     @OnClick(rl_open_file)
-    public void onClick(View view) {
+    public void rlOpenFileClick(View view) {
+        isLoadExcel = true;
         rlOpenFile.setVisibility(View.INVISIBLE);
-        ReadExcelAsyncTask readExcelAsyncTask=new ReadExcelAsyncTask(getContext(),"");
+        ReadExcelAsyncTask readExcelAsyncTask = new ReadExcelAsyncTask(getContext(), "");
         readExcelAsyncTask.execute();
+    }
+
+    @OnClick(R.id.fb_add)
+    public void fbAddClick(View view) {
+        int i = 0;
+        for (int j = 0; j < numberOnExcels.size(); ++j)
+            if(numberOnExcels.get(j).isCheck())
+                i++;
+        Toast.makeText(getContext(), "Chọn " + i + "/" + numberOnExcels.size()+" bản ghi", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -95,8 +110,8 @@ public class AddNumberFromExcel extends BaseFragment implements CompoundButton.O
 
         public ReadExcelAsyncTask(Context context, String path) {
             map = new HashMap<>();
-            this.context=context;
-            this.path=path;
+            this.context = context;
+            this.path = path;
         }
 
         @Override
@@ -129,41 +144,33 @@ public class AddNumberFromExcel extends BaseFragment implements CompoundButton.O
                         map.put(j, key);
                     }
                 }
-
+                String data = "//";
+                String title = "";
                 for (int i = 1; i < count; ++i) {
                     Row row = sheet.getRow(i);
                     if (row != null) {
                         numberOnExcel = new NumberOnExcel();
                         for (int j = 0; j < max; ++j) {
                             Cell cell = row.getCell(j, Row.CREATE_NULL_AS_BLANK);
-                            String data = "//";
-
                             switch (cell.getCellType()) {
                                 case Cell.CELL_TYPE_NUMERIC:
-//                                    Log.e("HH ", "" + i + ":" + j + ": " + cell.getNumericCellValue());
-
                                     if (DateUtil.isCellDateFormatted(cell)) {
                                         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
                                         data = String.valueOf(dateFormat.format(cell.getDateCellValue()));
                                     } else {
-//                                    data = Double.toString(cell.getNumericCellValue());
                                         data = String.format("%.0f", cell.getNumericCellValue());
                                     }
                                     break;
                                 case Cell.CELL_TYPE_BLANK:
-//                                    Log.e("HH", "" + i + ":" + j + ": " + "blank");
                                     break;
                                 case Cell.CELL_TYPE_STRING:
-//                                    Log.e("HH", "" + i + ":" + j + ": " + cell.getStringCellValue());
                                     data = cell.getStringCellValue();
                                     break;
                                 case Cell.CELL_TYPE_FORMULA:
-//                                    Log.e("HH", "" + i + ":" + j + ": " + cell.getStringCellValue());
                                     data = cell.getStringCellValue();
                                     break;
                             }
-                            String title = map.get(j);
-
+                            title = map.get(j);
                             if (title.equalsIgnoreCase("name"))
                                 numberOnExcel.setName(data);
                             else if (title.equalsIgnoreCase("email"))
@@ -190,9 +197,9 @@ public class AddNumberFromExcel extends BaseFragment implements CompoundButton.O
         protected void onProgressUpdate(NumberOnExcel... values) {
             super.onProgressUpdate(values);
             numberOnExcels.add(values[0]);
-//            readFromExcelAdapter.notifyDataSetChanged();
-//            readFromExcelAdapter.setNumberOnExcels(numberOnExcels);
-//            readFromExcelAdapter.notifyDataSetChanged();
+//            LogE(numberOnExcels.size() + "");
+//            if (numberOnExcels.size() == 100)
+//                readFromExcelAdapter.notifyDataSetChanged();
         }
 
         @Override

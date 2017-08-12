@@ -7,7 +7,7 @@ import android.os.Parcel;
  */
 
 public class NumberOnExcel extends Number {
-    boolean check=false;
+    boolean check=true;
 
     public boolean isCheck() {
         return check;

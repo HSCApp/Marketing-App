@@ -22,6 +22,7 @@ import hsc.marketingmessager.model.Eu;
 public abstract class BaseFragment extends Fragment {
     protected Eu eu;
     private String TAG = getClass().getSimpleName();
+    public static int READ_CONTACT=1;
     public BaseFragment()
     {
         initVariable();

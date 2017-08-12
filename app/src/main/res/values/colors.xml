@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#3fa151</color>
+    <color name="colorPrimaryDark">#84a768</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlackPaste">#5b5b5b</color>
 
@@ -33,4 +33,7 @@
     <color name="colorCellBorder">#d4d4d4</color>
     <color name="cellBackground">#ffffff</color>
     <color name="colorCellBorderPress">#217346</color>
+    <color name="colorFabFromExcel">#4f9f9f</color>
+    <color name="colorFabFromContact">#439c4d</color>
+    <color name="colorFabNewNumber">#4f4f7b</color>
 </resources>

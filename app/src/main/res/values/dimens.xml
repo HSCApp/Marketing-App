@@ -10,4 +10,5 @@
     <dimen name="oval_a_stroke">1px</dimen>
     <dimen name="item_tablayout_add_number_size">10sp</dimen>
     <dimen name="item_read_from_excel_title_size">17sp</dimen>
+    <dimen name="fab_margin">20dp</dimen>
 </resources>

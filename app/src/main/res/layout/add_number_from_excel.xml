@@ -6,25 +6,29 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-            <include layout="@layout/item_read_from_excel_header"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_read_from_excel_header" />
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
         </LinearLayout>
     </HorizontalScrollView>
+
     <RelativeLayout
         android:id="@+id/rl_open_file"
-        android:background="@drawable/ripple"
-        android:focusable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:clickable="true">
+        android:background="@drawable/ripple"
+        android:clickable="true"
+        android:focusable="true">
 
         <ImageView
             android:id="@+id/iv"
@@ -40,4 +44,17 @@
             android:layout_centerHorizontal="true"
             android:text="Bấm vào đây để chọn file" />
     </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fb_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_dialog_email" />
+    </android.support.design.widget.CoordinatorLayout>
 </RelativeLayout>
